@@ -31,7 +31,7 @@ module.exports = function (steward) {
             return {
                 key: 'url',
                 universal: true,
-                icon: item.poster,
+                icon: item.poster || icon,
                 title: item.title,
                 desc: url,
                 url
