@@ -3,6 +3,8 @@
         "epl.js",
         "fbrank.js",
         "ipsearch.js",
-        "zimuzu.js"
+        "zimuzu.js",
+        "douban.book.js",
+        "douban.movie.js"
     ]
 }
