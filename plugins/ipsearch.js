@@ -16,7 +16,7 @@ module.exports = function(steward) {
         icon
     }];
 
-    const APP_KEY = 'xxx';
+    const APP_KEY = '8465a1b30b97dc10237731bf940c8902';
     const ipRegexp = /\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b/;
 
     function searchIp(ip) {
