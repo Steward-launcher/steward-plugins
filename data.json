@@ -1,10 +1,51 @@
 {
     "plugins": [
-        "epl.js",
-        "fbrank.js",
-        "ipsearch.js",
-        "zimuzu.js",
-        "douban.book.js",
-        "douban.movie.js"
+        {
+            "version": 1,
+            "name": "douban book",
+            "icon": "https://www.douban.com/favicon.ico",
+            "title": "在 book.douban.com 查找书籍",
+            "subtitle": "按 Enter / Return 跳转到豆瓣读书网页",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/douban.book.js"
+        },
+        {
+            "version": 1,
+            "name": "douban movie",
+            "icon": "https://www.douban.com/favicon.ico",
+            "title": "在 movie.douban.com 查找电影",
+            "subtitle": "按 Enter / Return 跳转到豆瓣电影网页",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/douban.movie.js"
+        },
+        {
+            "version": 1,
+            "name": "Epl Competitions",
+            "icon": "http://staticsports.pplive.cn/2018/interim/app/pc_league/static/v_20180905135831/images/yc_logo.png",
+            "title": "英超赛事查询",
+            "subtitle": "英超最近比赛查询，按 Enter 键打开相应的比赛页面，数据来自 PPTV",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/epl.js"
+        },
+        {
+            "version": 1,
+            "name": "Soccer Rank",
+            "icon": "http://img1.gtimg.com/sports/pics/hv1/196/95/2276/148021321.png",
+            "title": "足球积分榜查询",
+            "subtitle": "积分榜，数据来自腾讯体育",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/fbrank.js"
+        },
+        {
+            "version": 1,
+            "name": "IP Search",
+            "icon": "http://static.oksteward.com/ip.png",
+            "title": "查询 ip",
+            "subtitle": "输入 ipv4 地址，查询 ip 所在地点及运营商",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/ipsearch.js"
+        },
+        {
+            "name": "zimuzu movie",
+            "icon": "http://static.oksteward.com/icon-movie.png",
+            "title": "在 zimuzu.io 查找电影",
+            "subtitle": "按 Enter / Return 跳转到 zimuzu 网页",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/zimuzu.js"
+        }
     ]
 }
