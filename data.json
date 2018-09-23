@@ -52,6 +52,14 @@
             "subtitle": "按 Enter / Return 跳转到 zimuzu 网页",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/zimuzu.js",
             "author": "tomasy"
+        },
+        {
+            "name": "User Scripts",
+            "icon": "https://greasyfork.org/assets/blacklogo96-e0c2c76180916332b7516ad47e1e206b42d131d36ff4afe98da3b1ba61fd5d6c.png",
+            "title": "根据 host 查找 userscripts",
+            "subtitle": "数据来自 https://greasyfork.org/",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/userscripts.js",
+            "author": "tomasy"
         }
     ]
 }
