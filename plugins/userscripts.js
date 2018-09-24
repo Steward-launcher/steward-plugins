@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 1;
+    const version = 2;
     const id = 'solobat';
     const name = 'User Scripts';
     const key = 'us';
