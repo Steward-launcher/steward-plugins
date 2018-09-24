@@ -1,7 +1,7 @@
 
 module.exports = function (steward) {
     const version = 1;
-    const id = 'solobat';
+    const author = 'solobat';
     const name = 'douban book';
     const key = 'dbb';
     const type = 'keyword';
@@ -60,7 +60,7 @@ module.exports = function (steward) {
     }
 
     return {
-        id,
+        author,
         version,
         name,
         category: 'other',
