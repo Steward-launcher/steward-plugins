@@ -7,7 +7,7 @@
             "title": "在 book.douban.com 查找书籍",
             "subtitle": "按 Enter / Return 跳转到豆瓣读书网页",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/douban.book.js",
-            "author": "tomasy"
+            "author": "solobat"
         },
         {
             "version": 1,
@@ -16,7 +16,7 @@
             "title": "在 movie.douban.com 查找电影",
             "subtitle": "按 Enter / Return 跳转到豆瓣电影网页",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/douban.movie.js",
-            "author": "tomasy"
+            "author": "solobat"
         },
         {
             "version": 1,
@@ -25,7 +25,7 @@
             "title": "英超赛事查询",
             "subtitle": "英超最近比赛查询，按 Enter 键打开相应的比赛页面，数据来自 PPTV",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/epl.js",
-            "author": "tomasy"
+            "author": "solobat"
         },
         {
             "version": 1,
@@ -34,7 +34,7 @@
             "title": "足球积分榜查询",
             "subtitle": "积分榜，数据来自腾讯体育",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/fbrank.js",
-            "author": "tomasy"
+            "author": "solobat"
         },
         {
             "version": 1,
@@ -43,23 +43,25 @@
             "title": "查询 ip",
             "subtitle": "输入 ipv4 地址，查询 ip 所在地点及运营商",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/ipsearch.js",
-            "author": "tomasy"
+            "author": "solobat"
         },
         {
+            "version": 1,
             "name": "zimuzu movie",
             "icon": "http://static.oksteward.com/icon-movie.png",
             "title": "在 zimuzu.io 查找电影",
             "subtitle": "按 Enter / Return 跳转到 zimuzu 网页",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/zimuzu.js",
-            "author": "tomasy"
+            "author": "solobat"
         },
         {
+            "version": 2,
             "name": "User Scripts",
             "icon": "https://greasyfork.org/assets/blacklogo96-e0c2c76180916332b7516ad47e1e206b42d131d36ff4afe98da3b1ba61fd5d6c.png",
             "title": "根据 host 查找 userscripts",
             "subtitle": "数据来自 https://greasyfork.org/",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/userscripts.js",
-            "author": "tomasy"
+            "author": "solobat"
         }
     ]
 }
