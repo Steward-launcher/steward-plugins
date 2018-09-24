@@ -8,9 +8,9 @@
 
 ```javascript
 {
-    mode, // steward application mode
+    mode, // steward application mode: 'newTab' | 'popup' | 'content'
     config, // user config
-    data, // steward data, { page: Object }
+    data, // steward data: { page: Object }
     chrome, // chrome api
     util, // 工具 api
     dayjs, // 日期库
