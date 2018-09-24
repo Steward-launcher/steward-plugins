@@ -8,6 +8,9 @@
 
 ```javascript
 {
+    mode, // steward application mode
+    config, // user config
+    data, // steward data, { page: Object }
     chrome, // chrome api
     util, // 工具 api
     dayjs, // 日期库
@@ -21,9 +24,9 @@
 
 ```javascript
 {
-    id, // 开发者 id，比如邮箱或 github 账号
+    author, // 开发者 id，比如邮箱或 github 账号
     version, // 版本号
-    name, // 插件名，与 id 一起级成唯一识别 id(uid)
+    name, // 插件名，与 author 一起组成唯一识别 id(uid)
     category: 'other', // 插件类别，填 ‘other’ 就好，暂时没用
     icon, // 插件 icon
     title, // 插件标题
@@ -118,6 +121,18 @@ function getDefaultResult(command) {
 }
 ```
 
+- `getEmptyResult`
+```javascript
+/**
+* 根据 command 生成默认空查询结果
+* @param { Object } command 在 plugin 里定义的 command
+* @param { String | Optional } msg 空查询提示
+* @return { Array[Item] } 包含一条对 onEnter 透明的默认空查询结果
+*/
+function getEmptyResult(command, msg) {
+}
+```
+
 - `copyToClipboard`
 
 ```javascript
@@ -165,7 +180,7 @@ https://github.com/iamkun/dayjs
 ```javascript
 module.exports = function(steward) {
   const version = 1;
-  const id = 'solobat';
+  const author = 'solobat';
   const name = 'IP Search';
   const key = 'ip';
   const type = 'keyword';
@@ -229,7 +244,7 @@ module.exports = function(steward) {
   }
   
   return {
-	  id,
+	  author,
 	  version,
 	  name,
 	  category: 'other',
