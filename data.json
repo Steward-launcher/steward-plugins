@@ -2,6 +2,15 @@
     "plugins": [
         {
             "version": 1,
+            "name": "douban music",
+            "icon": "https://www.douban.com/favicon.ico",
+            "title": "在 music.douban.com 查找音乐",
+            "subtitle": "按 Enter / Return 跳转到豆瓣音乐网页",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/douban.music.js",
+            "author": "lifesign"
+        },
+        {
+            "version": 1,
             "name": "douban book",
             "icon": "https://www.douban.com/favicon.ico",
             "title": "在 book.douban.com 查找书籍",
