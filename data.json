@@ -71,6 +71,15 @@
             "subtitle": "数据来自 https://greasyfork.org/",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/userscripts.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Chrome Flags",
+            "icon": "https://i.imgur.com/zU9XGzr.png",
+            "title": "Chrome Flags",
+            "subtitle": "查找并打开 chrome flags 设置",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/chromeflags.js",
+            "author": "solobat"
         }
     ]
 }
