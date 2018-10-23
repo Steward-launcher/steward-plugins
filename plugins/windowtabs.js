@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 1;
+    const version = 2;
     const author = 'solobat';
     const name = 'Tabs in window';
     const type = 'keyword';
@@ -30,7 +30,7 @@ module.exports = function (steward) {
     }
 
     function attachTabs() {
-        chrome.windows.getAll({populate: true}, wins => {
+        chrome.windows.getAll({ populate: true }, wins => {
             if (wins.length) {
                 let curTabs = [];
                 let curWin;
@@ -45,11 +45,24 @@ module.exports = function (steward) {
                     }
                 });
 
-                let i = curTabs.length;
+                function moveTabs() {
+                    let i = curTabs.length;
 
-                otherTabs.forEach(({ id: tabId }) =>
-                    chrome.tabs.move(tabId, { windowId: curWin.id, index: i++ }, console.log)
-                )
+                    otherTabs.forEach(({ id: tabId }) => {
+                        chrome.tabs.move(tabId, { windowId: curWin.id, index: i++ }, console.log)
+                    })
+                }
+
+                if (curWin) {
+                    moveTabs();
+                } else {
+                    // popup mode
+                    chrome.windows.getLastFocused({ populate: true }, result => {
+                        curWin = result;
+                        curTabs = result.tabs;
+                        moveTabs();
+                    })
+                }
             } else {
                 steward.util.toast('Only one window');
             }
