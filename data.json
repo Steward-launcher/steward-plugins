@@ -80,6 +80,15 @@
             "subtitle": "查找并打开 chrome flags 设置",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/chromeflags.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Tabs in window",
+            "icon": "https://i.imgur.com/QcoukjA.png",
+            "title": "Manage tabs in the window",
+            "subtitle": "Detach a tab and also to attach all tabs from a window.",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/windowtabs.js",
+            "author": "solobat"
         }
     ]
 }
