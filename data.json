@@ -98,6 +98,15 @@
             "subtitle": "Find and open jenkins jobs",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/jenkins.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Coin",
+            "icon": "https://i.imgur.com/mmVqAlB.png",
+            "title": "Query digital currency info",
+            "subtitle": "Enter btc/eth/eos/ft, etc. to check their global prices...",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/coin.js",
+            "author": "solobat"
         }
     ]
 }
