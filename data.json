@@ -100,8 +100,8 @@
             "author": "solobat"
         },
         {
-            "version": 1,
-            "name": "Coin",
+            "version": 2,
+            "name": "Coin Market",
             "icon": "https://i.imgur.com/mmVqAlB.png",
             "title": "Query digital currency info",
             "subtitle": "Enter btc/eth/eos/ft, etc. to check their global prices...",

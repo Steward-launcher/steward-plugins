@@ -6,7 +6,7 @@
 
 module.exports = function(steward) {
     const author = 'solobat';
-    const version = '1';
+    const version = '2';
     const name = 'coin';
     const type = 'keyword';
 
