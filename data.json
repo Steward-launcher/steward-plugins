@@ -89,6 +89,15 @@
             "subtitle": "Detach a tab and also to attach all tabs from a window.",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/windowtabs.js",
             "author": "solobat"
+        },
+        {
+            "version": 2,
+            "name": "Jenkins",
+            "icon": "https://i.imgur.com/Xpgr4TK.png",
+            "title": "Jenkins",
+            "subtitle": "Find and open jenkins jobs",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/jenkins.js",
+            "author": "solobat"
         }
     ]
 }
