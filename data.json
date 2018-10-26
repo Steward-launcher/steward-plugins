@@ -107,6 +107,15 @@
             "subtitle": "Enter btc/eth/eos/ft, etc. to check their global prices...",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/coin.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Times",
+            "icon": "https://i.imgur.com/S8dvYkh.png",
+            "title": "Add times",
+            "subtitle": "Add times, the format is: {task}/{m|w|d}/{times}，Enter times +1，Shift + Enter times -1",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/times.js",
+            "author": "solobat"
         }
     ]
 }
