@@ -17,6 +17,8 @@ Since V3.5.1, Steward has opened the api and provided the plugin editor.
 
 [Steward Plugins Repo](https://github.com/Steward-launcher/steward-plugins)
 
+You can add help documentation for your plugin in [this repository](https://github.com/Steward-launcher/steward-documents).
+
 ### Data structure
 - `steward` Object
 
@@ -32,7 +34,9 @@ Plugin code is wrappered with `module.exports = function(steward) {}`，`steward
     dayjs, // date library
     $, // jquery
     axios, // http library
-    constant //
+    constant, //
+    storage, // promise style
+    browser // https://github.com/mozilla/webextension-polyfill
 }
 ```
 
@@ -46,7 +50,7 @@ Plugin code is wrappered with `module.exports = function(steward) {}`，`steward
     category: 'other', // category of plugin，just use `other`
     icon, // plugin icon
     title, // plugin title
-    commands, // commaneds of plugin, required
+    commands, // commaneds of plugin, if null, means a plugin of search type
     onInput, // core api, triggered when user enters
     onEnter // core api，triggered when user clicks one item or press enter / return
 }

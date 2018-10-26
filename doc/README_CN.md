@@ -1,6 +1,8 @@
 从 V3.5.1 以后，Steward 开放了 api，并提供了 plugin 编辑器。
 
 ## 插件开发说明
+你可以在[这个仓库](https://github.com/Steward-launcher/steward-documents)添加你的插件的帮助文档
+
 ### 数据结构
 - `steward` 对象
 
@@ -16,7 +18,9 @@
     dayjs, // 日期库
     $, // jquery
     axios, // http 库
-    constant // 常量
+    constant, // 常量
+    storage // 支持 promise 的 chrome.storage 
+    browser // https://github.com/mozilla/webextension-polyfill
 }
 ```
 
