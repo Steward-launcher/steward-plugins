@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 1;
+    const version = 2;
     const author = 'solobat';
     const name = 'Chrome Flags';
     const type = 'search';
