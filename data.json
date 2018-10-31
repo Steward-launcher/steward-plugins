@@ -116,6 +116,15 @@
             "subtitle": "Add times, the format is: {task}/{m|w|d}/{times}，Enter times +1，Shift + Enter times -1",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/times.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Hot Rank",
+            "icon": "https://i.imgur.com/CDBL9t5.jpg",
+            "title": "果汁排行榜",
+            "subtitle": "数据来自 http://guozhivip.com",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/hotrank.js",
+            "author": "solobat"
         }
     ]
 }
