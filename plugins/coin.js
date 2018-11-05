@@ -6,7 +6,7 @@
 
 module.exports = function(steward) {
     const author = 'solobat';
-    const version = '2';
+    const version = '3';
     const name = 'coin';
     const type = 'keyword';
 
@@ -38,7 +38,9 @@ module.exports = function(steward) {
         
         price: (coinId = 1, convertTo = 'BTC') => {
             return axios.get(`${root}/ticker/${coinId}`, {
-                convert: convertTo
+                params: {
+                    convert: convertTo
+                }
             });
         }
     }
