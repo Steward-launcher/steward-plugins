@@ -125,6 +125,15 @@
             "subtitle": "数据来自 http://guozhivip.com",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/hotrank.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Coin News",
+            "icon": "https://www.bishijie.com/favicon.ico",
+            "title": "币世界新闻",
+            "subtitle": "按 Enter / Return 跳转到币世界网页",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/bishijie.js",
+            "author": "solobat"
         }
     ]
 }
