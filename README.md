@@ -1,5 +1,14 @@
 [中文](./doc/README_CN.md)
 
+This is the official plugin repository for [Steward](https://github.com/solobat/Steward)
+
+## Install Steward：
+- [Steward](https://chrome.google.com/webstore/detail/dnkhdiodfglfckibnfcjbgddcgjgkacd)
+- [Browser Alfred -- Without NewTab](https://chrome.google.com/webstore/detail/browser-alfred-a-command/jglmompgeddkbcdamdknmebaimldkkbl)
+- [Offline](http://owsjc7iz3.bkt.clouddn.com/steward-3.5.5.crx)。
+
+---
+
 Plugins are a core feature of Steward, and plugins make it quick and easy to do most of your daily browser operations.
 
 Steward comes with a series of plugins, and also provides the plugin api, you can complete the development of the plugin you want with just a few lines of code.
