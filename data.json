@@ -143,6 +143,15 @@
             "subtitle": "按 Enter / Return 跳转到少数派文章页",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/sspai.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Stocks",
+            "icon": "https://i.imgur.com/Qc7XZqB.png",
+            "title": "股票行情",
+            "subtitle": "数据来自新浪财经, 按 Enter / Return 跳转到少数派文章页",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/stock.js",
+            "author": "solobat"
         }
     ]
 }
