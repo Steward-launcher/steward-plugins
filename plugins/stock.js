@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 1;
+    const version = 2;
     const author = 'solobat';
     const name = 'Stocks';
     const key = 'stocks';
@@ -78,7 +78,8 @@ module.exports = function (steward) {
                         percent: `${((data[3] / data[2] - 1)* 100).toFixed(2)}%`,
                         isUp
                     };
-                });
+                })
+                .sort((a, b) => parseFloat(a.percent, 10) > parseFloat(b.percent, 10) ? -1 : 1);
         } catch (error) {
             return Promise.reject(null); 
         }
