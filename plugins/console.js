@@ -5,9 +5,9 @@ module.exports = function (steward) {
     const name = 'console';
     const key = '>';
     const type = 'keyword';
-    const icon = 'http://static.oksteward.com/icon128.png';
+    const icon = 'https://i.imgur.com/Z2qwSNT.png';
     const title = 'console';
-    const subtitle = 'execute code';
+    const subtitle = 'execute javascript code';
     const commands = [{
         key,
         type,
@@ -16,45 +16,51 @@ module.exports = function (steward) {
         icon
     }];
 
-    function dataFormat(result) {
-        if (typeof result !== 'object') {
-            return [
-                {
-                    key: 'copy',
-                    univarsal: true,
-                    icon,
-                    title: result
-                }
-            ];
-        } else {
-            const arr = Array.from(result);
+    const results = [];
 
-            if (arr.length) {
-
-            } else {
-                return [{
-                    key: 'copy',
-                    univarsal: true,
-                    icon,
-                    title: result.toString()
-                }]
+    function dataFormat(list) {
+        return list.map(item => {
+            return {
+                title: item,
+                icon
             }
-        }
+        }); 
     }
 
     function onInput(query, command) {
-        try {
-            const result = eval(query);
-            console.log(result);
-
-            return Promise.resolve(dataFormat(result));
-        } catch (error) {
-            
+        if (results.length) {
+            return Promise.resolve(dataFormat(results));
+        } else {
+            return steward.util.getDefaultResult(command);
         }
     }
 
     function onEnter(item, command, query, shiftKey, list) {
-        steward.util.copyToClipboard(item.title, true);
+        if (query) {
+            let result;
+
+            try {
+                result = eval(query);
+
+                if (result === null) {
+                    result = 'null';
+                }
+
+                if (result === undefined) {
+                    result = 'undefined';
+                }
+            } catch (error) {
+                result = error.message;
+            } finally {
+                results.unshift(result.toString());
+
+                window.stewardApp.applyCommand('> ');
+            }
+        } else {
+            steward.util.copyToClipboard(item.title, true);
+        }
+
+        return Promise.resolve(true);
     }
 
     return {

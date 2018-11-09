@@ -152,6 +152,15 @@
             "subtitle": "数据来自新浪财经, 按 Enter / Return 跳转到少数派文章页",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/stock.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Console",
+            "icon": "https://i.imgur.com/Z2qwSNT.png",
+            "title": "A simple console",
+            "subtitle": "execute your javascript code and show the result",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/console.js",
+            "author": "solobat"
         }
     ]
 }
