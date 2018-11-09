@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 2;
+    const version = 3;
     const author = 'solobat';
     const name = 'console';
     const key = '>';
@@ -25,7 +25,7 @@ module.exports = function (steward) {
                 desc: item.code,
                 icon
             }
-        }); 
+        });
     }
 
     function onInput(query, command) {
@@ -36,9 +36,26 @@ module.exports = function (steward) {
         }
     }
 
+    const $ = new Proxy({}, {
+        get(target, prop) {
+            console.log(prop);
+
+            switch (prop) {
+                case 'now':
+                    return steward.dayjs().format("YYYY-MM-DD HH:mm:ss");
+                case 'unix':
+                    return steward.dayjs().unix();
+                default:
+                    return void 0;
+            }
+        }
+    });
+
     function onEnter(item, command, query, shiftKey, list) {
         if (query) {
             let result;
+            const day = steward.dayjs;
+            const http = steward.axios;
 
             try {
                 result = eval(query);
