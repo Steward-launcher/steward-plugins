@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 1;
+    const version = 2;
     const author = 'solobat';
     const name = 'console';
     const key = '>';
@@ -21,7 +21,8 @@ module.exports = function (steward) {
     function dataFormat(list) {
         return list.map(item => {
             return {
-                title: item,
+                title: item.result,
+                desc: item.code,
                 icon
             }
         }); 
@@ -52,7 +53,10 @@ module.exports = function (steward) {
             } catch (error) {
                 result = error.message;
             } finally {
-                results.unshift(result.toString());
+                results.unshift({
+                    result: result.toString(),
+                    code: query
+                });
 
                 window.stewardApp.applyCommand('> ');
             }
