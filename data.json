@@ -136,7 +136,7 @@
             "author": "solobat"
         },
         {
-            "version": 1,
+            "version": 2,
             "name": "sspai articles",
             "icon": "https://cdn.sspai.com/sspai/assets/img/favicon/icon.ico",
             "title": "少数派首页文章",
@@ -154,7 +154,7 @@
             "author": "solobat"
         },
         {
-            "version": 3,
+            "version": 4,
             "name": "Console",
             "icon": "https://i.imgur.com/Z2qwSNT.png",
             "title": "A simple console",

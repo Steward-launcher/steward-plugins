@@ -1,8 +1,8 @@
 
 module.exports = function (steward) {
-    const version = 3;
+    const version = 4;
     const author = 'solobat';
-    const name = 'console';
+    const name = 'Console';
     const key = '>';
     const type = 'keyword';
     const icon = 'https://i.imgur.com/Z2qwSNT.png';

@@ -1,8 +1,8 @@
 
 module.exports = function (steward) {
-    const version = 1;
+    const version = 2;
     const author = 'solobat';
-    const name = 'sspai';
+    const name = 'spai articles';
     const key = 'ssp';
     const type = 'keyword';
     const icon = 'https://cdn.sspai.com/sspai/assets/img/favicon/icon.ico';
