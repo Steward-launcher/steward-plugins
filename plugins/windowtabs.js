@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 2;
+    const version = 3;
     const author = 'solobat';
     const name = 'Tabs in window';
     const type = 'keyword';
@@ -21,12 +21,50 @@ module.exports = function (steward) {
         icon
     }];
 
-    function detachSelectedTab() {
+    function detachSelectedTab(item) {
         chrome.tabs.getSelected(null, t => {
             if (t.id >= 0) {
-                chrome.windows.create({ tabId: t.id, focused: true })
+                if (!item.id) {
+                    chrome.windows.create({ tabId: t.id, focused: true })
+                } else {
+                    chrome.tabs.move(t.id, {
+                        windowId: item.id,
+                        index: item.tabIndex + 1
+                    }, console.log)
+                }
             }
         })
+    }
+
+    function getOtherWindows() {
+        return new Promise(resolve => {
+            chrome.windows.getAll({ populate: true }, wins => {
+                if (wins.length) {
+                    let curWin;
+    
+                    curWin = wins.find(win => win.focused);
+
+                    function getOthers() {
+                        const otherWins = wins.filter(win => win.id !== curWin.id);
+
+                        resolve(otherWins);
+                    }
+    
+                    if (!curWin) {
+                        // popup mode
+                        chrome.windows.getLastFocused({ populate: true }, result => {
+                            curWin = result;
+
+                            getOthers();
+                        }) 
+                    } else {
+                        getOthers();
+                    }
+                } else {
+                    resolve([]);
+                }
+            });
+        });
     }
 
     function attachTabs() {
@@ -69,17 +107,49 @@ module.exports = function (steward) {
         });
     }
 
+    function getOtherWindowsResult() {
+        return getOtherWindows().then(wins => {
+            return wins.map(win => {
+                const tab = win.tabs.pop();
+
+                tab.index = win.tabs.length;
+
+                return {
+                    id: win.id,
+                    icon: tab.favIconUrl || icon,
+                    title: tab.title,
+                    desc: 'detach to this window',
+                    tabId: tab.id,
+                    tabIndex: tab.index
+                }
+            });
+        });
+    }
+
+    const defaultDetachResult = [
+        {
+            icon,
+            title: 'Detach in a new window'
+        }
+    ];
+
     function onInput(query, command) {
-        const result = steward.util.getDefaultResult(command);
+        if (command.key === 'det') {
+            return getOtherWindowsResult().then(items => {
+                return defaultDetachResult.concat(items);
+            });
+        } else {
+            const result = steward.util.getDefaultResult(command);
 
-        result[0].isDefault = false;
+            result[0].isDefault = false;
 
-        return Promise.resolve(result);
+            return Promise.resolve(result);
+        }
     }
 
     function onEnter(item, command, query, shiftKey, list) {
         if (command.key === 'det') {
-            detachSelectedTab();
+            detachSelectedTab(item);
         } else if (command.key === 'att') {
             attachTabs();
         }
