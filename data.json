@@ -91,7 +91,7 @@
             "author": "solobat"
         },
         {
-            "version": 2,
+            "version": 3,
             "name": "Jenkins",
             "icon": "https://i.imgur.com/Xpgr4TK.png",
             "title": "Jenkins",
@@ -100,7 +100,7 @@
             "author": "solobat"
         },
         {
-            "version": 3,
+            "version": 4,
             "name": "Coin Market",
             "icon": "https://i.imgur.com/mmVqAlB.png",
             "title": "Query digital currency info",

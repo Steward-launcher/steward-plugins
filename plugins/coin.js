@@ -6,7 +6,7 @@
 
 module.exports = function(steward) {
     const author = 'solobat';
-    const version = '3';
+    const version = '4';
     const name = 'coin';
     const type = 'keyword';
 
@@ -218,7 +218,7 @@ module.exports = function(steward) {
         return exConf.urlFn(coinSymbol, fixedConvert);
     }
     
-    function onEnter(item, { orkey }) {
+    function onEnter(item, { orkey }, query, keyStatus) {
         if (orkey === 'coins') {
             setCoinState(item.title.toUpperCase(), {
                 id: item.id
@@ -226,7 +226,8 @@ module.exports = function(steward) {
     
             return Promise.resolve(`coin ${item.id}`);
         } else if (orkey === 'coin') {
-            chrome.tabs.create({ url: getTradeUrl(item.state.coinSymbol, item.state.convertTo, item.state.ex), active: true });
+            steward.util.createTab({ url: getTradeUrl(item.state.coinSymbol, item.state.convertTo, item.state.ex), active: true },
+                keyStatus);
             setCoinState(item.state.coinSymbol, item.state);
         }
     }

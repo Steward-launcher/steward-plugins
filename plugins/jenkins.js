@@ -8,7 +8,7 @@ module.exports = function(steward) {
     const util = steward.util;
     const Toast = steward.util.toast;
     const author = 'solobat';
-    const version = 2;
+    const version = 3;
     const name = 'jenkins'
     //'jk', 'jkb', 'jkc', 'jkw', 'jkset'
     const keys = [
@@ -141,7 +141,7 @@ module.exports = function(steward) {
         });
     }
 
-    function onEnter({ id }) {
+    function onEnter({ id }, command, query, keyStatus) {
         if (id.startsWith('action-')) {
             const actionName = id.split('-')[1];
 
@@ -162,9 +162,7 @@ module.exports = function(steward) {
                 });
             }
         } else if (id) {
-            chrome.tabs.create({
-                url: id
-            });
+            steward.util.createTab({ url: id }, keyStatus);
         }
     }
 
