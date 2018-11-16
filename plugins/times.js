@@ -12,7 +12,7 @@ module.exports = function(steward) {
     const dayjs = steward.dayjs;
 
     const author = 'solobat';
-    const version = 1;
+    const version = 2;
     const name = 'times';
     const keys = [
         { key: 'ts' },
@@ -77,7 +77,7 @@ module.exports = function(steward) {
         }
     }
 
-    function onEnter(item, command, query, shiftKey) {
+    function onEnter(item, command, query, { shiftKey }) {
         const orkey = command.orkey;
 
         if (orkey === 'ts') {
