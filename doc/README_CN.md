@@ -35,8 +35,10 @@
     icon, // 插件 icon
     title, // 插件标题
     commands, // 插件命令列表，不能为空
+    onInit, // 插件初次使用时调用
     onInput, // 核心 api, 输入事件函数
-    onEnter // 核心 api，选中事件函数
+    onEnter, // 核心 api，选中事件函数
+    onLeave // 调用其它 command 时触发
 }
 
 ```
@@ -101,18 +103,30 @@
   * @param { Object } item 选中的查询结果条目
   * @param { Object } command 当前触发的命令
   * @param { String } query 当前的查询字符串
-  * @param { Boolean } shiftKey 用户是否同时按下 shift 键
+  * @param { Object } keyStatus 用户按键状态: ctrlKey / shiftKey / metaKey / altKey
   * @param { Array } list 全部的查询结果
   * @return { Promise[String | Boolean]}
   *           Promise[String] 作为新的命令被应用到输入框中
   *           Promise[Boolean] 只对页面模式有效，在Boolean 为 false 时，Steward 弹框将延迟关闭
   */
-  function onEnter(item, command, query, shiftKey, list) {
+  function onEnter(item, command, query, keyStatus, list) {
       return Promise.resolve([String | Boolean]);
   }
 ```
 
 #### steward.util
+- `createTab`
+```javascript
+/**
+* 打开新标签页，根据 keyStatus.metaKey 为 true 时，在当前标签页打开
+* @param { Object } item from onEnter
+* @param { Object } keyStatus from onEnter
+*/
+function createTab(item, keyStatus) {
+    // tabs.update() or tabs.create()
+}
+```
+
 - `getDefaultResult`
 
 ```javascript
@@ -243,7 +257,7 @@ module.exports = function(steward) {
 	  }
   }
   
-  function onEnter(item, command, query, shiftKey, list) {
+  function onEnter(item, command, query, keyStatus, list) {
 	  steward.util.copyToClipboard(item.title, true);
   }
   

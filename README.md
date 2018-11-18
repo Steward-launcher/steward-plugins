@@ -60,8 +60,10 @@ Plugin code is wrappered with `module.exports = function(steward) {}`，`steward
     icon, // plugin icon
     title, // plugin title
     commands, // commaneds of plugin, if null, means a plugin of search type
+    onInit, // triggered when plugin is first used 
     onInput, // core api, triggered when user enters
-    onEnter // core api，triggered when user clicks one item or press enter / return
+    onEnter, // core api，triggered when user clicks one item or press enter / return
+    onLeave // triggered when another commaned will be applyed
 }
 
 ```
@@ -126,18 +128,31 @@ Plugin code is wrappered with `module.exports = function(steward) {}`，`steward
   * @param { Object } item Selected query result entry
   * @param { Object } command Currently triggered command
   * @param { String } query Current query string
-  * @param { Boolean } shiftKey Whether of not the user presses the shift key at the same time
+  * @param { Object } keyStatus Include ctrlKey / metaKey / altKey / shiftKey
   * @param { Array } list All query results
   * @return { Promise[String | Boolean]}
   *           Promise[String] Applied as a new command to the input box
   *           Promise[Boolean] Only valid for page mode, Steward frame will be delayed when Boolean is false or Number value
   */
-  function onEnter(item, command, query, shiftKey, list) {
+  function onEnter(item, command, query, keyStatus, list) {
       return Promise.resolve([String | Boolean | Number]);
   }
 ```
 
 #### steward.util
+- `createTab`
+```javascript
+/**
+* create a new tab depending on the `keyStatus`
+* @param { Object } item from onEnter
+* @param { Object } keyStatus from onEnter
+*/
+function createTab(item, keyStatus) {
+    // tabs.update() or tabs.create()
+}
+```
+
+
 - `getDefaultResult`
 
 ```javascript
