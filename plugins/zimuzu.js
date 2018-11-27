@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 1;
+    const version = 2;
     const author = 'solobat';
     const name = 'zimuzu movie';
     const key = 'zm';
@@ -13,7 +13,8 @@ module.exports = function (steward) {
         type,
         title,
         subtitle,
-        icon
+        icon,
+        shiftKey: true
     }];
 
     function searchKeyword(keyword) {

@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 2;
+    const version = 3;
     const author = 'solobat';
     const name = 'spai articles';
     const key = 'ssp';
@@ -13,7 +13,8 @@ module.exports = function (steward) {
         type,
         title,
         subtitle,
-        icon
+        icon,
+        shiftKey: true
     }];
 
     function fetchList() {

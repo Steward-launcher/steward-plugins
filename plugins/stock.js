@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 2;
+    const version = 3;
     const author = 'solobat';
     const name = 'Stocks';
     const key = 'stocks';
@@ -13,7 +13,8 @@ module.exports = function (steward) {
         type,
         title,
         subtitle,
-        icon
+        icon,
+        shiftKey: true
     }];
     const icons = {
         stockRed: 'https://i.imgur.com/oXSZKcG.png',
