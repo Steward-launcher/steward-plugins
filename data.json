@@ -73,10 +73,11 @@
             "author": "solobat"
         },
         {
-            "version": 2,
+            "version": 3,
             "name": "Chrome Flags",
             "icon": "https://i.imgur.com/zU9XGzr.png",
             "title": "Chrome Flags",
+            "platform": "Chrome",
             "subtitle": "查找并打开 chrome flags 设置",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/chromeflags.js",
             "author": "solobat"
