@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 3;
+    const version = 4;
     const author = 'solobat';
     const name = 'Stocks';
     const key = 'stocks';
@@ -13,8 +13,7 @@ module.exports = function (steward) {
         type,
         title,
         subtitle,
-        icon,
-        shiftKey: true
+        icon
     }];
     const icons = {
         stockRed: 'https://i.imgur.com/oXSZKcG.png',
@@ -51,7 +50,6 @@ module.exports = function (steward) {
         return list.map(item => {
             return {
                 key: 'url',
-                universal: true,
                 icon: item.isUp ? icons.stockRed : icons.stockGreen,
                 title: `${item.name}[${item.code}]`,
                 desc: `涨幅: ${item.isUp ? '+' : ''}${item.percent} -- 当前价格: ${item.price} -- 昨日收盘价${item.predayPrice}`,
@@ -112,8 +110,13 @@ module.exports = function (steward) {
             });
     }
 
-    function onEnter(item, command, query, shiftKey, list) {
-
+    function onEnter(item, command, query, keyStatus, list) {
+        if (keyStatus.shiftKey) {
+            // 打开主要财务指标页面，方便查看 ROA/ROE/PE
+            chrome.tabs.create({ url: item.url + '/detail#/ZYCWZB' });
+        } else {
+            chrome.tabs.create({ url: item.url });
+        }
     }
 
     return {
