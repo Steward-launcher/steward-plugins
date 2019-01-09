@@ -1,7 +1,7 @@
 module.exports = function(steward) {
     const version = 1;
     const author = 'clearives';
-    const name = '掘金';
+    const name = 'Juejin';
     const key = 'jj';
     const type = 'keyword';
     const icon = 'https://i.loli.net/2019/01/09/5c35880f1b8be.png';
