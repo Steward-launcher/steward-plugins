@@ -162,6 +162,15 @@
             "subtitle": "execute your javascript code and show the result",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/console.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Juejin",
+            "icon": "https://i.loli.net/2019/01/09/5c35880f1b8be.png",
+            "title": "掘金文章搜索(0:推荐，1:前端，2:后端)",
+            "subtitle": "按 Enter / Return 跳转到对应网页",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/juejin.js",
+            "author": "clearives"
         }
     ]
 }
