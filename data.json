@@ -171,6 +171,15 @@
             "subtitle": "按 Enter / Return 跳转到对应网页",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/juejin.js",
             "author": "clearives"
+        },
+        {
+            "version": 1,
+            "name": "Zimuzu hot movies",
+            "icon": "https://ws1.sinaimg.cn/large/6836364ely1fzopj47on0j205k05kq2w.jpg",
+            "title": "查看字幕组热门影视",
+            "subtitle": "按 Enter / Return 跳转到对应网页",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/queryzmzhot.js",
+            "author": "solobat"
         }
     ]
 }
