@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 2;
+    const version = 3;
     const author = 'solobat';
     const name = 'zimuzu movie';
     const key = 'zm';
@@ -18,7 +18,7 @@ module.exports = function (steward) {
     }];
 
     function searchKeyword(keyword) {
-        return steward.axios.get('http://www.zimuzu.tv/search/api', {
+        return steward.axios.get('http://www.zimuzu.io/search/api', {
             params: {
                 keyword
             }
@@ -27,7 +27,7 @@ module.exports = function (steward) {
 
     function dataFormat(list) {
         return list.map(item => {
-            const url = `http://www.zimuzu.tv/resource/${item.itemid}`;
+            const url = `http://www.zimuzu.io/resource/${item.itemid}`;
 
             return {
                 key: 'url',
