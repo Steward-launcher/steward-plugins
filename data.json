@@ -189,6 +189,15 @@
             "subtitle": "press Enter / Return to open the url",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/wiki.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "NewTab Src",
+            "icon": "https://wx1.sinaimg.cn/large/6836364ely1ge0j4vfvzfj203k03k3yb.jpg",
+            "title": "Customize the URL of newtab",
+            "subtitle": "Type reset to restore the default page",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/newtabsrc.js",
+            "author": "solobat"
         }
     ]
 }
