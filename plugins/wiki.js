@@ -5,8 +5,7 @@ module.exports = function (steward) {
   const name = 'Wiki';
   const key = 'wk';
   const type = 'keyword';
-  // TODO
-  const icon = '';
+  const icon = 'https://wx1.sinaimg.cn/large/6836364ely1ge0iyhz1zrj2074074jr6.jpg';
   const title = 'wiki';
   const subtitle = 'Confluence Wiki';
   const commands = [{
