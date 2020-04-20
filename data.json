@@ -180,6 +180,15 @@
             "subtitle": "按 Enter / Return 跳转到对应网页",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/queryzmzhot.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Wiki documents",
+            "icon": "https://wx1.sinaimg.cn/large/6836364ely1ge0iyhz1zrj2074074jr6.jpg",
+            "title": "View wiki documents",
+            "subtitle": "press Enter / Return to open the url",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/wiki.js",
+            "author": "solobat"
         }
     ]
 }
