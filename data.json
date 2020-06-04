@@ -198,6 +198,15 @@
             "subtitle": "Type reset to restore the default page",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/newtabsrc.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Themes",
+            "icon": "https://i.imgur.com/zU9XGzr.png",
+            "title": "Switch theme",
+            "subtitle": "Press return/enter to switch the status of the current theme",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/theme.js",
+            "author": "solobat"
         }
     ]
 }
