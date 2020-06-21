@@ -210,7 +210,7 @@
         }
         ,
         {
-            "version": 1,
+            "version": 2,
             "name": "Run Command",
             "icon": "https://file-paodin.nohabitlife.com/18da50660a75a8ccfc6f/Automation.png",
             "title": "Run Steward Helper Command",

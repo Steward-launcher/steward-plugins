@@ -1,9 +1,9 @@
 
 module.exports = function (steward) {
-  const version = 1;
+  const version = 2;
   const author = 'solobat';
   const name = 'Run Command';
-  const key = 'run';
+  const key = 'start';
   const type = 'keyword';
   const icon = 'https://file-paodin.nohabitlife.com/18da50660a75a8ccfc6f/Automation.png';
   const title = 'Run Steward Helper Command';
