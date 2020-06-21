@@ -208,5 +208,15 @@
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/theme.js",
             "author": "solobat"
         }
+        ,
+        {
+            "version": 1,
+            "name": "Run Command",
+            "icon": "https://file-paodin.nohabitlife.com/18da50660a75a8ccfc6f/Automation.png",
+            "title": "Run Steward Helper Command",
+            "subtitle": "Please install Steward Helper first",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/runcommand.js",
+            "author": "solobat"
+        }
     ]
 }
