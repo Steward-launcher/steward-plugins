@@ -1,9 +1,9 @@
 module.exports = function (steward) {
-  const version = 1;
+  const version = 2;
   const author = 'solobat';
   const name = 'Themes';
   const type = 'keyword';
-  const icon = steward.chrome.extension.getURL('iconfont/google.svg');
+  const icon = 'https://s1.ax1x.com/2020/06/22/NGUkWT.png';
   const title = 'Switch theme';
   const subtitle = 'Press return/enter to switch the status of the current theme';
   const commands = [{
