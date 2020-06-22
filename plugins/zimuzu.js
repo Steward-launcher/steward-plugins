@@ -1,11 +1,11 @@
 
 module.exports = function (steward) {
-    const version = 3;
+    const version = 4;
     const author = 'solobat';
     const name = 'zimuzu movie';
     const key = 'zm';
     const type = 'keyword';
-    const icon = 'http://static.oksteward.com/icon-movie.png';
+    const icon = 'https://s1.ax1x.com/2020/06/22/NGB4Qf.png';
     const title = '在 zimuzu.io 查找电影';
     const subtitle = '按 Enter / Return 跳转到 zimuzu 网页';
     const commands = [{
@@ -18,7 +18,7 @@ module.exports = function (steward) {
     }];
 
     function searchKeyword(keyword) {
-        return steward.axios.get('http://www.zimuzu.io/search/api', {
+        return steward.axios.get('http://www.rrys2019.com/search/api', {
             params: {
                 keyword
             }
@@ -27,7 +27,7 @@ module.exports = function (steward) {
 
     function dataFormat(list) {
         return list.map(item => {
-            const url = `http://www.zimuzu.io/resource/${item.itemid}`;
+            const url = `http://www.rrys2019.com/resource/${item.itemid}`;
 
             return {
                 key: 'url',
