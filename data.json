@@ -218,5 +218,15 @@
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/runcommand.js",
             "author": "solobat"
         }
+        ,
+        {
+            "version": 1,
+            "name": "Tabs Plus",
+            "icon": "https://i.imgur.com/QcoukjA.png",
+            "title": "Manage tabs in all the windows",
+            "subtitle": "Manage tabs in all the windows",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/tabplus.js",
+            "author": "solobat"
+        }
     ]
 }
