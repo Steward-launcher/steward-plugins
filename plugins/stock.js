@@ -4,7 +4,7 @@
  */
 
 module.exports = function (steward) {
-    const version = 5;
+    const version = 6;
     const author = 'solobat';
     const name = 'Stocks';
     const type = 'keyword';
@@ -208,7 +208,7 @@ module.exports = function (steward) {
         } else if (keyStatus.ctrlKey) {
             updateCodeList(item.code, 'remove').then(() => {
                 steward.util.toast.success('删除自选成功');
-                window.stewardApp.applyCommand('stocks ');
+                window.stewardApp.app.applyCommand('stocks ');
             });
         } else {
             chrome.tabs.create({ url: item.url });
@@ -218,7 +218,7 @@ module.exports = function (steward) {
     function handleCodeEnter(item) {
         return updateCodeList(item.code).then(() => {
             steward.util.toast.success('添加自选成功');
-            window.stewardApp.applyCommand('code ');
+            window.stewardApp.app.applyCommand('code ');
         }).catch(msg => {
             steward.util.toast.warning(msg);
         });

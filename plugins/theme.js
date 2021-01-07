@@ -1,5 +1,5 @@
 module.exports = function (steward) {
-  const version = 2;
+  const version = 3;
   const author = 'solobat';
   const name = 'Themes';
   const type = 'keyword';
@@ -58,7 +58,7 @@ module.exports = function (steward) {
     if (item && item.id) {
         setEnabled(item.id, !item.meta.enabled);
         window.slogs.push(`Enable: ${item.title}`);
-        window.stewardApp.refresh();
+        window.stewardApp.app.refresh();
     }
   }
 

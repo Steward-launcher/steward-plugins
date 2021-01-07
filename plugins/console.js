@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 4;
+    const version = 5;
     const author = 'solobat';
     const name = 'Console';
     const key = '>';
@@ -75,7 +75,7 @@ module.exports = function (steward) {
                     code: query
                 });
 
-                window.stewardApp.applyCommand('> ');
+                window.stewardApp.app.applyCommand('> ');
             }
         } else {
             steward.util.copyToClipboard(item.title, true);

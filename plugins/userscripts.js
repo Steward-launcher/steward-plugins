@@ -1,6 +1,6 @@
 
 module.exports = function (steward) {
-    const version = 2;
+    const version = 3;
     const author = 'solobat';
     const name = 'User Scripts';
     const key = 'us';
@@ -27,7 +27,7 @@ module.exports = function (steward) {
             return {
                 key: 'url',
                 universal: true,
-                icon: steward.app.data.page ? steward.app.data.page.icon : icon,
+                icon: steward.data.page ? steward.data.page.icon : icon,
                 title: item.name,
                 desc: item.description,
                 url: item.url
@@ -39,8 +39,8 @@ module.exports = function (steward) {
         const hostReg = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$/;
         let host = query.trim();
 
-        if (!host && steward.app.data.page) {
-            host = steward.app.data.page.host;
+        if (!host && steward.data.page) {
+            host = steward.data.page.host;
         }
 
         if (host.startsWith('www.')) {

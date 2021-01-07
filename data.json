@@ -64,7 +64,7 @@
             "author": "solobat"
         },
         {
-            "version": 2,
+            "version": 3,
             "name": "User Scripts",
             "icon": "https://greasyfork.org/assets/blacklogo96-e0c2c76180916332b7516ad47e1e206b42d131d36ff4afe98da3b1ba61fd5d6c.png",
             "title": "根据 host 查找 userscripts",
@@ -146,7 +146,7 @@
             "author": "solobat"
         },
         {
-            "version": 5,
+            "version": 6,
             "name": "Stocks",
             "icon": "https://i.imgur.com/Qc7XZqB.png",
             "title": "股票行情",
@@ -155,7 +155,7 @@
             "author": "solobat"
         },
         {
-            "version": 4,
+            "version": 5,
             "name": "Console",
             "icon": "https://i.imgur.com/Z2qwSNT.png",
             "title": "A simple console",
@@ -200,7 +200,7 @@
             "author": "solobat"
         },
         {
-            "version": 2,
+            "version": 3,
             "name": "Themes",
             "icon": "https://i.imgur.com/zU9XGzr.png",
             "title": "Switch theme",
