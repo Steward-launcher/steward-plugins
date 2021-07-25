@@ -227,6 +227,15 @@
             "subtitle": "Manage tabs in all the windows",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/tabplus.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "Crypto Prices",
+            "icon": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png",
+            "title": "Cryptocurrency prices",
+            "subtitle": "List Cryptocurrency Prices",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/cryptos.js",
+            "author": "solobat"
         }
     ]
 }
