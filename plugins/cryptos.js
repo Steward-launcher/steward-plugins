@@ -1,5 +1,5 @@
 module.exports = function (steward) {
-  const version = 1;
+  const version = 2;
   const author = "solobat";
   const name = "Crypto Prices";
   const key = "cc";
@@ -19,27 +19,44 @@ module.exports = function (steward) {
   ];
 
   // coingecko coin ids
+  const idNameMap = {
+      "immutable-x": "IMX",
+      "ethereum-name-service": "ENS",
+      "bitcoin": "BTC",
+      "ethereum": "ETH",
+      "filecoin": "FIL",
+      "solana": "SOL",
+      "fantom": "FTM",
+      "uniswap": "UNI"
+  }
+
   const tokens = [
     "bitcoin",
-    "binancecoin",
     "ethereum",
-    "Filecoin",
+    "immutable-x",
+    "ethereum-name-service",
+    "filecoin",
     "solana",
+    "fantom",
     "uniswap",
-    "aave",
   ];
+  
   const icons = {
     bitcoin: 'https://assets.coingecko.com/coins/images/1/small/bitcoin.png',
     binancecoin: 'https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png',
     ethereum: 'https://assets.coingecko.com/coins/images/279/small/ethereum.png',
     uniswap: 'https://assets.coingecko.com/coins/images/12504/small/uniswap-uni.png',
     solana: 'https://assets.coingecko.com/coins/images/4128/small/coinmarketcap-solana-200.png',
+    "immutable-x": 'https://assets.coingecko.com/coins/images/17233/small/immutable-x.jpeg',
+    "ethereum-name-service": "https://assets.coingecko.com/coins/images/19785/small/acatxTm8_400x400.jpg",
     filecoin: 'https://assets.coingecko.com/coins/images/12817/small/filecoin.png',
-    aave: 'https://assets.coingecko.com/coins/images/12645/small/AAVE.png'
+    aave: 'https://assets.coingecko.com/coins/images/12645/small/AAVE.png',
+    dydx: 'https://assets.coingecko.com/coins/images/17500/small/hjnIm9bV.jpg?1628009360',
+    fantom: 'https://assets.coingecko.com/coins/images/4001/small/Fantom.png?1558015016',
   }
 
   function formatName(name) {
-    return [name[0].toUpperCase(), name.substr(1)].join("");
+    return idNameMap[name];
   }
 
   function fetchList() {
