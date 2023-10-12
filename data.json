@@ -210,9 +210,9 @@
         }
         ,
         {
-            "version": 2,
+            "version": 3,
             "name": "Run Command",
-            "icon": "https://file-paodin.nohabitlife.com/18da50660a75a8ccfc6f/Automation.png",
+            "icon": "https://i.imgur.com/iBTbPYs.png",
             "title": "Run Steward Helper Command",
             "subtitle": "Please install Steward Helper first",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/runcommand.js",
