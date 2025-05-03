@@ -236,6 +236,15 @@
             "subtitle": "List Cryptocurrency Prices",
             "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/cryptos.js",
             "author": "solobat"
+        },
+        {
+            "version": 1,
+            "name": "restartext",
+            "icon": "https://i.imgur.com/zU9XGzr.png",
+            "title": "重启 Chrome 扩展",
+            "subtitle": "重启指定的 Chrome 扩展",
+            "source": "https://raw.githubusercontent.com/Steward-launcher/steward-plugins/master/plugins/restartext.js",
+            "author": "solobat"
         }
     ]
 }
